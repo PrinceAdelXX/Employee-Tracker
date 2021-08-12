@@ -1,26 +1,26 @@
 {
   "name": "employee-tracker",
   "version": "1.0.0",
-  "description": "Track employees by departments",
-  "main": "index.js",
-  "dependencies": {
-    "console.table": "^0.10.0",
-    "inquirer": "^8.1.1",
-    "mysql2": "^2.2.5",
-    "save": "^2.4.0"
-  },
-  "devDependencies": {},
+  "description": "",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arobles31/employee-tracker.git"
+    "url": "git+https://github.com/chelciedealmeida/Employee-tracker.git"
   },
-  "author": "Alejandro Robles",
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/arobles31/employee-tracker/issues"
+    "url": "https://github.com/chelciedealmeida/Employee-tracker/issues"
   },
-  "homepage": "https://github.com/arobles31/employee-tracker#readme"
+  "homepage": "https://github.com/chelciedealmeida/Employee-tracker#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "express": "^4.17.1",
+    "inquirer": "^8.0.0",
+    "mysql2": "^2.2.5"
+  }
 }

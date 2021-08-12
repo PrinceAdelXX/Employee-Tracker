@@ -1,43 +1,42 @@
-# Employee Tracker
-Node.js
-inquirer
-MySQL
+# **_Employee Tracker_**
+  
+## **_Description_**
+An employee tracker that uses CRUD operations from the command line using mysql
 
-# link to walkthrough video
+## **_Technologies Used_**  
+* JavaScript
+* NodeJS (Inquirer)
+* MYSQL
+* Console.table
+* Express
 
-https://drive.google.com/file/d/1eLIdYCKidKPtelQGG1IRVuCqD_vJ3Qw-/view
+## **_Installation_**
+Note: users are expected to know some JavaScript
+
+Here are some guidelines for installing the project on your local machine in order to be able to try it:
+
+Make sure to have mysql server downloaded and running.
+
+Since Node.js applications don't have a front end, clone or download the repository to your own local machine and run it from your command line.
+
+Then, make sure that your repo includes a package.json with the required dependencies. You can create one by running npm init in your command line.
+
+Run node server.js or npm start in your terminal to launch the application.
 
 
-## Table of Contents
+https://user-images.githubusercontent.com/35352010/126974994-3cfd2455-010c-4a32-9007-c6c86994dca4.mov
 
-- [Description](#description)
-- [Installation](#installation)
-- [How to use](#how-to-use)
-- [Contributing](#contributing)
-- [Questions](#questions)
 
-## Description
+That's it, you're done! 
 
-AS A business owner
-I WANT to be able to view and manage the departments, roles, and employees in my company
-SO THAT I can organize and plan my businesss
 
-## Installation
 
-You will have to clone the GitHub Repository to local machine & run "npm install", "npm install --save mysql2" and "npm install inquirer to download all prerequisite packages and dependencies.
+  
 
-## How to use
 
-You will have to run the app by typing "node index.js" in the command line.
 
-## Contributing
 
-Please feel free to contribute by contacting the creator and cloning the repository to make any changes.
 
-## Questions
 
-Should you have any questions regarding this project please open an issue or contact the creator at the below email address.
 
-[GitHub - arobles31](https://github.com/arobles31)
 
-[arobles2828@gmail.com](arobles2828@gmail.com)
