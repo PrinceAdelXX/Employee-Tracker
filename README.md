@@ -1,30 +1,18 @@
-# **_Employee Tracker_**
+# Employee-Tracker
 
-## **_Table of contents_**
-* [Description of the project](#description-of-the-project)
-* [Technologies used](#technologies-used)
-* [Usage](#usage)
-* [Installation](#installation)
-* [Link URL to GitHub Repository](#link-URL-to-GitHub-repository)
+## Description of the project
+This application is an employee tracker, made with the ue of  Nodejs. The Questions are initiated in the CLI and the user's answers promptly modifies the database.
 
-## **_Description of the project_**
-This project is an employee tracker, CRUD application, using Nodejs. Questions are prompted in the CLI and the user's answers will modify the database.
-
-## **_Technologies used_**
-Project is created using:
+## Technologies Used
 * JavaScript
-* Nodejs
-* Expressjs
-* MySQL database
+* Node.js
+* Express.js
+* MySQL
 * MySQL2
 * console.table
 
-## **_Usage_**
-Final app should look something like this:
-https://user-images.githubusercontent.com/78329298/117609685-4bdaeb80-b115-11eb-8af5-735c097ba573.mov
 
-## **_Installation_**
-Here are some guidelines for installing the project on your local machine in order to be able to try it: 
+## Installation Process 
 
 1. Make sure to have mysql server downloaded and running.
 
@@ -34,8 +22,7 @@ Here are some guidelines for installing the project on your local machine in ord
 
 4. Run ```node server.js``` or ```npm start``` in your terminal to launch the application.
 
-5. Enjoy and don't hesitate to contribute!
 
 ## **_Link URL to GitHub Repository_**
-https://github.com/Noemiegrau/employee-tracker
 
+https://github.com/PrinceAdelXX/Employee-Tracker
