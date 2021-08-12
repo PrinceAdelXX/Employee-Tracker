@@ -74,7 +74,7 @@ function viewAllDepartments() {
     const sql = `SELECT * FROM department`;
     db.query(sql, (err, result) => {
         if (err) {
-            res.status(500).json({ error: err.message })
+            result.status(500).json({ error: err.message })
             return;
         }
         console.table(result);
@@ -87,7 +87,7 @@ function viewAllRoles() {
     const sql = `SELECT * FROM roles`;
     db.query(sql, (err, result) => {
         if (err) {
-            res.status(500).json({ error: err.message })
+            result.status(500).json({ error: err.message })
             return;
         }
         console.table(result);
@@ -170,7 +170,7 @@ function addRole() {
 
             db.query(`SELECT * FROM roles`, (err, result) => {
                 if (err) {
-                    res.status(500).json({ error: err.message })
+                    result.status(500).json({ error: err.message })
                     startPrompt();
                 }
                 console.table(result);
@@ -211,7 +211,7 @@ function addEmployee() {
 
             db.query(`SELECT * FROM employee`, (err, result) => {
                 if (err) {
-                    res.status(500).json({ error: err.message })
+                    result.status(500).json({ error: err.message })
                     startPrompt();
                 }
                 console.table(result);
@@ -241,7 +241,7 @@ function updateEmployeeRole() {
 
             db.query(`SELECT * FROM employee`, (err, result) => {
                 if (err) {
-                    res.status(500).json({ error: err.message })
+                    result.status(500).json({ error: err.message })
                     startPrompt();
                 }
                 console.table(result);
@@ -271,7 +271,7 @@ function updateEmployeeManager() {
 
             db.query(`SELECT * FROM employee`, (err, result) => {
                 if (err) {
-                    res.status(500).json({ error: err.message })
+                    result.status(500).json({ error: err.message })
                     startPrompt();
                 }
                 console.table(result);
@@ -296,7 +296,7 @@ function deleteDepartment() {
 
             db.query(`SELECT * FROM department`, (err, result) => {
                 if (err) {
-                    res.status(500).json({ error: err.message })
+                    result.status(500).json({ error: err.message })
                     startPrompt();
                 }
                 console.table(result);
@@ -321,7 +321,7 @@ function deleteRole() {
 
             db.query(`SELECT * FROM roles`, (err, result) => {
                 if (err) {
-                    res.status(500).json({ error: err.message })
+                    result.status(500).json({ error: err.message })
                     startPrompt();
                 }
                 console.table(result);
@@ -346,7 +346,7 @@ function deleteEmployee() {
 
             db.query(`SELECT * FROM employee`, (err, result) => {
                 if (err) {
-                    res.status(500).json({ error: err.message })
+                    result.status(500).json({ error: err.message })
                     startPrompt();
                 }
                 console.table(result);
