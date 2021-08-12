@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Noemiegrau/employee-tracker.git"
+    "url": "git+https://github.com/PrinceAdelXX/Employee-Tracker"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Noemiegrau/employee-tracker/issues"
+    "url": "https://github.com/PrinceAdelXX/Employee-Tracker/issues"
   },
-  "homepage": "https://github.com/Noemiegrau/employee-tracker#readme",
+  "homepage": "https://github.com/PrinceAdelXX/Employee-Tracker#readme",
   "dependencies": {
     "console.table": "^0.10.0",
     "express": "^4.17.1",

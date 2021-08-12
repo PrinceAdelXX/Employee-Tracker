@@ -84,7 +84,7 @@ function viewAllDepartments() {
 
 // View all roles
 function viewAllRoles() {
-    const sql = `SELECT * FROM role`;
+    const sql = `SELECT * FROM roles`;
     db.query(sql, (err, result) => {
         if (err) {
             res.status(500).json({ error: err.message })
@@ -100,13 +100,13 @@ function viewAllEmployees() {
     const sql = `SELECT employee.id,
                 employee.first_name,
                 employee.last_name,
-                role.title AS job_title,
+                roles.title AS job_title,
                 department.department_name,
-                role.salary,
+                roles.salary,
                 CONCAT(manager.first_name, ' ' ,manager.last_name) AS manager
                 FROM employee
-                LEFT JOIN role ON employee.role_id = role.id
-                LEFT JOIN department ON role.department_id = department.id
+                LEFT JOIN role ON employee.roles_id = roles.id
+                LEFT JOIN department ON roles.department_id = department.id
                 LEFT JOIN employee AS manager ON employee.manager_id = manager.id
                 ORDER By employee.id`;
     db.query(sql, (err, result) => {
@@ -145,7 +145,7 @@ function addDepartment() {
 });
 };
 
-// Add a role
+// Add a roles
 function addRole() {
     inquirer.prompt([
         {
@@ -168,7 +168,7 @@ function addRole() {
             if (err) throw err;
             console.log('The new role entered has been added successfully to the database.');
 
-            db.query(`SELECT * FROM role`, (err, result) => {
+            db.query(`SELECT * FROM roles`, (err, result) => {
                 if (err) {
                     res.status(500).json({ error: err.message })
                     startPrompt();
@@ -194,7 +194,7 @@ function addEmployee() {
             message: "Please enter the last name of the employee you want to add to the database."
         },
         {
-            name: "role_id",
+            name: "roles_id",
             type: "number",
             message: "Please enter the role id associated with the employee you want to add to the database. Enter ONLY numbers."
         },
@@ -205,7 +205,7 @@ function addEmployee() {
         }
 
     ]).then(function (response) {
-        db.query("INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES (?, ?, ?, ?)", [response.first_name, response.last_name, response.role_id, response.manager_id], function (err, data) {
+        db.query("INSERT INTO employee (first_name, last_name, roles_id, manager_id) VALUES (?, ?, ?, ?)", [response.first_name, response.last_name, response.roles_id, response.manager_id], function (err, data) {
             if (err) throw err;
             console.log('The new employee entered has been added successfully to the database.');
 
@@ -230,12 +230,12 @@ function updateEmployeeRole() {
             message: "Please enter the first name of the employee you want update in the database."
         },
         {
-            name: "role_id",
+            name: "roles_id",
             type: "number",
             message: "Please enter the new role number id associated with the employee you want to update in the database. Enter ONLY numbers."
         }
     ]).then(function (response) {
-        db.query("UPDATE employee SET role_id = ? WHERE first_name = ?", [response.role_id, response.first_name], function (err, data) {
+        db.query("UPDATE employee SET roles_id = ? WHERE first_name = ?", [response.roles_id, response.first_name], function (err, data) {
             if (err) throw err;
             console.log('The new role entered has been added successfully to the database.');
 
@@ -310,16 +310,16 @@ function deleteDepartment() {
 function deleteRole() {
     inquirer.prompt([
         {
-            name: "role_id",
+            name: "roles_id",
             type: "number",
             message: "Please enter the id of the role you want to delete from the database. Enter ONLY numbers."
         }
     ]).then(function (response) {
-        db.query("DELETE FROM role WHERE id = ?", [response.role_id], function (err, data) {
+        db.query("DELETE FROM roles WHERE id = ?", [response.roles_id], function (err, data) {
             if (err) throw err;
             console.log("The role entered has been deleted successfully from the database.");
 
-            db.query(`SELECT * FROM role`, (err, result) => {
+            db.query(`SELECT * FROM roles`, (err, result) => {
                 if (err) {
                     res.status(500).json({ error: err.message })
                     startPrompt();
