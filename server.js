@@ -105,7 +105,7 @@ function viewAllEmployees() {
                 roles.salary,
                 CONCAT(manager.first_name, ' ' ,manager.last_name) AS manager
                 FROM employee
-                LEFT JOIN role ON employee.roles_id = roles.id
+                LEFT JOIN roles ON employee.roles_id = roles.id
                 LEFT JOIN department ON roles.department_id = department.id
                 LEFT JOIN employee AS manager ON employee.manager_id = manager.id
                 ORDER By employee.id`;
@@ -164,7 +164,7 @@ function addRole() {
             message: "Please enter the department's id associated with the role you want to add to the database."
         }
     ]).then(function (response) {
-        db.query("INSERT INTO role (title, salary, department_id) VALUES (?, ?, ?)", [response.title, response.salary, response.department_id], function (err, data) {
+        db.query("INSERT INTO roles (title, salary, department_id) VALUES (?, ?, ?)", [response.title, response.salary, response.department_id], function (err, data) {
             if (err) throw err;
             console.log('The new role entered has been added successfully to the database.');
 
