@@ -24,7 +24,11 @@ This application is an employee tracker, made with the ue of  Nodejs. The Questi
 
 ## Walkthrough Video:
 
-https://drive.google.com/file/d/1KvwugymAqHxvhNCRVrAnZHgOBqkHmsFb/view?usp=sharing
+
+
+https://user-images.githubusercontent.com/34521827/129727081-9b0362c6-f84e-44ba-a344-43f560a4f5ab.mp4
+
+
 
 ## **_Link URL to GitHub Repository_**
 
