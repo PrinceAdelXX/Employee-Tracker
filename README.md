@@ -22,6 +22,9 @@ This application is an employee tracker, made with the ue of  Nodejs. The Questi
 
 4. Run ```node server.js``` or ```npm start``` in your terminal to launch the application.
 
+## Walkthrough Video:
+
+https://drive.google.com/file/d/1KvwugymAqHxvhNCRVrAnZHgOBqkHmsFb/view?usp=sharing
 
 ## **_Link URL to GitHub Repository_**
 
